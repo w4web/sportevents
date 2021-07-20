@@ -1,0 +1,66 @@
+{
+  "TOPBAR": {
+    "searchPlaceholder": "Rechercher..",
+    "nav_myProfile": {
+      "title": "Mon profil",
+      "link_text_1": "Mon compte",
+      "link_text_2": "Réglage",
+      "link_text_3": "Se déconnecter"
+    }
+  },
+  "sidebar_data": {
+    "0": {
+      "title": "Tableau de bord",
+      "link": "/dashboard",
+      "icon": "fa fa-dashboard",
+      "isChild": false
+    },
+    "1": {
+      "title": "Des produits",
+      "link": "/product",
+      "icon": "fa fa-puzzle-piece",
+      "isChild": false
+    },
+    "2": {
+      "title": "Les clients",
+      "link": "/customer",
+      "icon": "fa fa-users",
+      "isChild": false
+    },
+    "3": {
+      "title": "Admin",
+      "link": "/admin",
+      "icon": "fa fa-user",
+      "isChild": true,
+      "Childs": {
+        "0": {
+          "title": "Admin Link 1",
+          "link": "/Link1",
+          "isChild": false
+        },
+        "1": {
+          "title": "Admin Link 2",
+          "link": "/Link2",
+          "isChild": false
+        },
+        "2": {
+          "title": "Admin Link 3",
+          "link": "/Link3",
+          "isChild": false
+        }
+      }
+    }
+  },
+  "SETTINGS": {
+    "TITLE": "Paramètres de profil.",
+    "SUBTITLE": "Ici, vous pouvez modifier les paramètres de votre profil.",
+    "COLOR": {
+      "TITLE": "Sélectionnez la couleur du thème.",
+      "OPTION_1": "Lumière",
+      "OPTION_2": "Sombre"
+    },
+    "LANGUAGE": {
+      "TITLE": "Choisissez votre langue."
+    }
+  }
+}

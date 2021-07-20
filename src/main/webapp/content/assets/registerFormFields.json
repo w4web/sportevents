@@ -1,0 +1,217 @@
+[
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-4",
+        "key": "prefix",
+        "type": "select",
+        "templateOptions": {
+          "label": "Prefix",
+          "options": [
+            {
+              "label": "Mr",
+              "value": "mr"
+            },
+            {
+              "label": "Mrs",
+              "value": "mrs"
+            }
+          ]
+        }
+      },
+      {
+        "className": "col-4",
+        "type": "input",
+        "key": "firstName",
+        "templateOptions": {
+          "label": "First Name",
+          "required": true
+        }
+      },
+      {
+        "className": "col-4",
+        "type": "input",
+        "key": "surname",
+        "templateOptions": {
+          "label": "Surname",
+          "required": true
+        },
+        "expressionProperties": {
+          "templateOptions.disabled": "!model.firstName"
+        }
+      }
+    ]
+  },
+  {
+    "key": "email",
+    "type": "input",
+    "templateOptions": {
+      "type": "email",
+      "label": "E-mail address",
+      "placeholder": "Enter email",
+      "required": true,
+      "minLength": 5,
+      "maxLength": 100
+    },
+    "validators": {
+      "validation": ["email"]
+    }
+  },
+  {
+    "key": "username",
+    "type": "input",
+    "templateOptions": {
+      "label": "Username",
+      "required": true
+    }
+  },
+  {
+    "validators": {
+      "validation": [
+        {
+          "name": "fieldMatch",
+          "options": {
+            "errorPath": "passwordConfirm"
+          }
+        }
+      ]
+    },
+    "fieldGroup": [
+      {
+        "key": "password",
+        "type": "input",
+        "templateOptions": {
+          "type": "password",
+          "label": "Password",
+          "placeholder": "Must be at least 3 characters",
+          "required": true,
+          "minLength": 3
+        }
+      },
+      {
+        "key": "passwordConfirm",
+        "type": "input",
+        "templateOptions": {
+          "type": "password",
+          "label": "Confirm Password",
+          "placeholder": "Please re-enter your password",
+          "required": true
+        }
+      }
+    ]
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-4",
+        "key": "gender",
+        "type": "select",
+        "templateOptions": {
+          "label": "Gender",
+          "options": [
+            {
+              "label": "Man",
+              "value": "man"
+            },
+            {
+              "label": "Woman",
+              "value": "woman"
+            }
+          ]
+        }
+      },
+      {
+        "className": "col-4",
+        "key": "height",
+        "type": "select",
+        "templateOptions": {
+          "label": "Height",
+          "options": [
+            {
+              "label": "140",
+              "value": "140"
+            },
+            {
+              "label": "141",
+              "value": "141"
+            },
+            {
+              "label": "142",
+              "value": "142"
+            },
+            {
+              "label": "143",
+              "value": "143"
+            },
+            {
+              "label": "144",
+              "value": "144"
+            },
+            {
+              "label": "145",
+              "value": "145"
+            }
+          ]
+        }
+      },
+      {
+        "className": "col-4",
+        "key": "weight",
+        "type": "select",
+        "templateOptions": {
+          "label": "Weight",
+          "options": [
+            {
+              "label": "40",
+              "value": "40"
+            },
+            {
+              "label": "41",
+              "value": "41"
+            },
+            {
+              "label": "42",
+              "value": "42"
+            },
+            {
+              "label": "43",
+              "value": "43"
+            },
+            {
+              "label": "44",
+              "value": "44"
+            },
+            {
+              "label": "45",
+              "value": "45"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "checkbox",
+    "key": "termsAndConditions",
+    "wrappers": ["termsAndConditions"],
+    "templateOptions": {
+      "label": "I agree to the",
+      "required": true
+    }
+  },
+  {
+    "className": "mb-2 d-block",
+    "type": "checkbox",
+    "key": "privacyConditions",
+    "wrappers": ["privacyConditions"],
+    "templateOptions": {
+      "label": "I agree to the",
+      "required": true
+    }
+  },
+  {
+    "template": "<div class='guide-text'>Click on 'Register' to register your account. After registration, you'll receive an e-mail with instructions for payment to activate your account.</div>"
+  }
+]

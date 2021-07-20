@@ -1,0 +1,108 @@
+[
+  {
+    "key": "length",
+    "type": "numberSelect",
+    "templateOptions": {
+      "label": "Length",
+      "placeholder": "",
+      "required": true,
+      "selectOptions": {
+        "startValue": 140,
+        "endValue": 210
+      },
+      "unit": "cm"
+    }
+  },
+  {
+    "key": "weight",
+    "type": "numberSelect",
+    "templateOptions": {
+      "label": "Weight",
+      "placeholder": "",
+      "required": true,
+      "selectOptions": {
+        "startValue": 40,
+        "endValue": 150
+      },
+      "unit": "kg"
+    }
+  },
+  {
+    "key": "fuelSettings.selectedOwnDrinkItem",
+    "type": "valueSelect",
+    "defaultValue": "yes",
+    "templateOptions": {
+      "label": "Do you use your own sports drink?",
+      "placeholder": "",
+      "required": true,
+      "selectOptions": {
+        "options": [
+          {
+            "value": true,
+            "label": "Yes"
+          },
+          {
+            "value": false,
+            "label": "No"
+          }
+        ]
+      },
+      "unit": ""
+    }
+  },
+  {
+    "key": "fuelSettings.carbohydratesSportDrank",
+    "type": "numberSelect",
+    "templateOptions": {
+      "label": "Grams of carbohydrates in 750mL sports drink",
+      "placeholder": "",
+      "helpInfo": "<p>The amount of grams of carbohydrates is stated on your gel's packaging. We need the amount of grams per 'serving' from you. Normally, this value is between 21 and 30 grams per gel. If the gel contains substantially more than that, it contains multiple servings.</p>",
+      "required": true,
+      "selectOptions": {
+        "startValue": 50,
+        "endValue": 60
+      },
+      "unit": "gr"
+    },
+    "hideExpression": "model.fuelSettings.selectedOwnDrinkItem == 'false'"
+  },
+  {
+    "key": "fuelSettings.selectedOwnGelItem",
+    "type": "valueSelect",
+    "defaultValue": "yes",
+    "templateOptions": {
+      "label": "Do you use your own gels?",
+      "placeholder": "",
+      "required": true,
+      "selectOptions": {
+        "options": [
+          {
+            "value": true,
+            "label": "Yes"
+          },
+          {
+            "value": false,
+            "label": "No"
+          }
+        ]
+      },
+      "unit": ""
+    }
+  },
+  {
+    "key": "fuelSettings.carbohydratesGel",
+    "type": "numberSelect",
+    "templateOptions": {
+      "label": "Grams of carbohydrates in gel",
+      "placeholder": "",
+      "helpInfo": "<p>We need the amount of grams of carbohydrates in 60g of your sports drink powder. Those 60g of powder will be mixed with 750mL of water. Our advice to mix 60g in 750mL is based on the desired density of 8% (isotonic). To see a sample calculation, check 'Explanation' in your Personal settings.</p>",
+      "required": true,
+      "selectOptions": {
+        "startValue": 21,
+        "endValue": 30
+      },
+      "unit": "gr"
+    },
+    "hideExpression": "model.fuelSettings.selectedOwnGelItem == 'false'"
+  }
+]

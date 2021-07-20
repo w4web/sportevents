@@ -1,0 +1,10 @@
+{
+  "image": "../../../content/assets/images/demo-img.jpg",
+  "title": "Welcome to Fuel",
+  "description": "<p>Sweat rate is different for everyone. It differs for every single (endurance) sport. Besides that, it is temperature- and intensity dependant. With Fuel, you can map your own sweat rate. Fuel then gives you personal advice for training sessions and races, based on your own sweat rate and energy needs. </p><p> Knowledge is power! Fuel will help you to train healthy and perform optimally by employing the Fuel2Endure motto: “Enter the training session balanced out, exit the training session balanced out.”This way, Fuel will help you to make it to the start- and finishline of your event in a healthy state. As fast as possible!</p>",
+  "button": {
+    "text": "Go somewhere",
+    "link": "/"
+  },
+  "footerText": "2 days ago"
+}

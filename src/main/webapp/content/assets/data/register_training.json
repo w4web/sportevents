@@ -1,0 +1,368 @@
+[
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-lg-5 col-6",
+        "key": "date",
+        "type": "input",
+        "templateOptions": {
+          "label": "Date",
+          "type": "date"
+        }
+      },
+      {
+        "className": "col-lg-5 col-6",
+        "key": "typeOfSport",
+        "type": "select",
+        "templateOptions": {
+          "label": "Type of Sport",
+          "options": [
+            {
+              "label": "Running",
+              "value": "running"
+            },
+            {
+              "label": "Cycling",
+              "value": "cycling"
+            },
+            {
+              "label": "Other",
+              "value": "other"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "template": "<hr />"
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-3",
+        "key": "trainingDurationHour",
+        "type": "select",
+        "templateOptions": {
+          "label": "Duration of training session",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            }
+          ],
+          "addonRight": {
+            "text": "Hour"
+          }
+        }
+      },
+      {
+        "className": "col-lg-2 col-3 noLabel",
+        "key": "trainingDurationMin",
+        "type": "select",
+        "templateOptions": {
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            }
+          ],
+          "addonRight": {
+            "text": "Min"
+          }
+        }
+      },
+      {
+        "className": "col-lg-5 col-6",
+        "key": "intensity",
+        "type": "select",
+        "templateOptions": {
+          "label": "Intensity",
+          "options": [
+            {
+              "label": "Low",
+              "value": "low"
+            },
+            {
+              "label": "Moderate",
+              "value": "moderate"
+            },
+            {
+              "label": "High",
+              "value": "high"
+            },
+            {
+              "label": "Peak",
+              "value": "peak"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "template": "<hr />"
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-lg-2 col-4",
+        "key": "temperature",
+        "type": "select",
+        "defaultValue": "-3",
+        "templateOptions": {
+          "label": "Temperature",
+          "options": [
+            {
+              "label": "-3",
+              "value": "-3"
+            },
+            {
+              "label": "-2",
+              "value": "-2"
+            },
+            {
+              "label": "-1",
+              "value": "-1"
+            },
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            }
+          ],
+          "addonRight": {
+            "text": "℃"
+          }
+        }
+      },
+      {
+        "className": "col-4",
+        "key": "weightBeforeTraining",
+        "type": "select",
+        "templateOptions": {
+          "label": "Weight before training session",
+          "options": [
+            {
+              "label": "50",
+              "value": "50"
+            },
+            {
+              "label": "60",
+              "value": "60"
+            },
+            {
+              "label": "70",
+              "value": "70"
+            }
+          ],
+          "addonRight": {
+            "text": "Kg"
+          }
+        }
+      },
+      {
+        "className": "col-4",
+        "key": "weightAfterTraining",
+        "type": "select",
+        "templateOptions": {
+          "label": "Weight after training session",
+          "options": [
+            {
+              "label": "50",
+              "value": "50"
+            },
+            {
+              "label": "60",
+              "value": "60"
+            },
+            {
+              "label": "70",
+              "value": "70"
+            }
+          ],
+          "addonRight": {
+            "text": "Kg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "template": "<hr />"
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-3",
+        "key": "fluidDrunkL",
+        "type": "select",
+        "templateOptions": {
+          "label": "Fluid drunk during training session",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            }
+          ],
+          "addonRight": {
+            "text": "L"
+          }
+        }
+      },
+      {
+        "className": "col-lg-2 col-3 noLabel",
+        "key": "fluidDrunkMl",
+        "type": "select",
+        "templateOptions": {
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "50",
+              "value": "50"
+            },
+            {
+              "label": "100",
+              "value": "100"
+            },
+            {
+              "label": "150",
+              "value": "150"
+            }
+          ],
+          "addonRight": {
+            "text": "Ml"
+          }
+        }
+      },
+      {
+        "className": "col-3",
+        "key": "eatenInTrainingKg",
+        "type": "select",
+        "templateOptions": {
+          "label": "Eaten during training session",
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            }
+          ],
+          "addonRight": {
+            "text": "Kg"
+          }
+        }
+      },
+      {
+        "className": "col-lg-2 col-3 noLabel",
+        "key": "eatenInTrainingGr",
+        "type": "select",
+        "templateOptions": {
+          "options": [
+            {
+              "label": "0",
+              "value": "0"
+            },
+            {
+              "label": "50",
+              "value": "50"
+            },
+            {
+              "label": "100",
+              "value": "100"
+            },
+            {
+              "label": "150",
+              "value": "150"
+            }
+          ],
+          "addonRight": {
+            "text": "Gr"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "template": "<hr />"
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-lg-10",
+        "type": "textarea",
+        "key": "comments",
+        "templateOptions": {
+          "label": "Comments",
+          "required": true
+        }
+      }
+    ]
+  }
+]

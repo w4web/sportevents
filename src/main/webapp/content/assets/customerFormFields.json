@@ -1,0 +1,153 @@
+[
+  {
+    "key": "id",
+    "type": "input",
+    "className": "productId",
+    "defaultValue": 0,
+    "templateOptions": {
+      "label": "Id",
+      "required": true
+    },
+    "expressionProperties": {
+      "templateOptions.disabled": "model.id"
+    }
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-6",
+        "type": "input",
+        "key": "firstName",
+        "templateOptions": {
+          "label": "First Name",
+          "required": true
+        }
+      },
+      {
+        "className": "col-6",
+        "type": "input",
+        "key": "lastName",
+        "templateOptions": {
+          "label": "Last Name",
+          "required": true
+        },
+        "expressionProperties": {
+          "templateOptions.disabled": "!model.firstName"
+        }
+      }
+    ]
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-6",
+        "key": "email",
+        "type": "input",
+        "templateOptions": {
+          "type": "email",
+          "label": "Email",
+          "placeholder": "Enter email",
+          "required": true,
+          "minLength": 5,
+          "maxLength": 100
+        },
+        "validators": {
+          "validation": ["email"]
+        }
+      },
+      {
+        "className": "col-6",
+        "type": "input",
+        "key": "phone",
+        "templateOptions": {
+          "label": "Phone number",
+          "required": true,
+          "minLength": 10,
+          "maxLength": 15
+        }
+      }
+    ]
+  },
+  {
+    "key": "addressLine1",
+    "type": "input",
+    "templateOptions": {
+      "label": "Address line 1",
+      "required": true
+    }
+  },
+  {
+    "key": "addressLine2",
+    "type": "input",
+    "templateOptions": {
+      "label": "Address line 2",
+      "required": true
+    }
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-6",
+        "key": "city",
+        "type": "input",
+        "templateOptions": {
+          "label": "city",
+          "required": true
+        }
+      },
+      {
+        "className": "col-6",
+        "key": "country",
+        "type": "input",
+        "templateOptions": {
+          "label": "country",
+          "required": true
+        }
+      }
+    ]
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-6",
+        "key": "gender",
+        "type": "select",
+        "templateOptions": {
+          "label": "Gender",
+          "options": [
+            {
+              "label": "Male",
+              "value": "MALE"
+            },
+            {
+              "label": "Female",
+              "value": "FEMALE"
+            }
+          ]
+        }
+      },
+      {
+        "className": "col-6",
+        "key": "user",
+        "type": "select",
+        "templateOptions": {
+          "label": "User",
+          "options": [
+            {
+              "label": "admin",
+              "value": "admin"
+            },
+            {
+              "label": "user",
+              "value": "user"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

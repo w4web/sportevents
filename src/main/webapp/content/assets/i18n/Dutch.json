@@ -1,0 +1,66 @@
+{
+  "TOPBAR": {
+    "searchPlaceholder": "Zoeken..",
+    "nav_myProfile": {
+      "title": "Mijn profiel",
+      "link_text_1": "Mijn rekening",
+      "link_text_2": "Instelling",
+      "link_text_3": "Uitloggen"
+    }
+  },
+  "sidebar_data": {
+    "0": {
+      "title": "Dashboard",
+      "link": "/dashboard",
+      "icon": "fa fa-dashboard",
+      "isChild": false
+    },
+    "1": {
+      "title": "Producten",
+      "link": "/product",
+      "icon": "fa fa-puzzle-piece",
+      "isChild": false
+    },
+    "2": {
+      "title": "Klanten",
+      "link": "/customer",
+      "icon": "fa fa-users",
+      "isChild": false
+    },
+    "3": {
+      "title": "beheerder",
+      "link": "/admin",
+      "icon": "fa fa-user",
+      "isChild": true,
+      "Childs": {
+        "0": {
+          "title": "beheerder Link 1",
+          "link": "/Link1",
+          "isChild": false
+        },
+        "1": {
+          "title": "beheerder Link 2",
+          "link": "/Link2",
+          "isChild": false
+        },
+        "2": {
+          "title": "beheerder Link 3",
+          "link": "/Link3",
+          "isChild": false
+        }
+      }
+    }
+  },
+  "SETTINGS": {
+    "TITLE": "Profielinstellingen.",
+    "SUBTITLE": "Hier kunt u uw profielinstellingen wijzigen.",
+    "COLOR": {
+      "TITLE": "Selecteer een themakleur.",
+      "OPTION_1": "Licht",
+      "OPTION_2": "Donker"
+    },
+    "LANGUAGE": {
+      "TITLE": "Kies je taal."
+    }
+  }
+}

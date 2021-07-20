@@ -1,0 +1,76 @@
+{
+  "logo": "../../../content/assets/images/logo.png",
+  "search_options": ["Activities", "Athletes", "Clubs", "Segments"],
+  "search_cancel_img": "../../../content/assets/images/cancel.png",
+  "menu": [
+    {
+      "text": "Home",
+      "link": "/dashboard",
+      "item_name": "item1",
+      "is_child": true,
+      "childs": [
+        {
+          "text": "About Fuel",
+          "link": "/"
+        }
+      ]
+    },
+    {
+      "text": "Training",
+      "link": "/training",
+      "item_name": "item2",
+      "is_child": true,
+      "childs": [
+        {
+          "text": "Explanation",
+          "link": "/"
+        }
+      ]
+    },
+    {
+      "text": "Fuel plan training session",
+      "link": "/",
+      "item_name": "item4",
+      "is_child": true,
+      "childs": [
+        {
+          "text": "Explanation",
+          "link": "/"
+        }
+      ]
+    },
+    {
+      "text": "Fuel plan event",
+      "link": "/",
+      "item_name": "item5",
+      "is_child": true,
+      "childs": [
+        {
+          "text": "Explanation",
+          "link": "/"
+        }
+      ]
+    }
+  ],
+  "account": {
+    "avatar": "../../../content/assets/images/avatar.png",
+    "text": "Test account",
+    "link": "/my-profile",
+    "item_name": "item6",
+    "is_child": true,
+    "childs": [
+      {
+        "text": "My Profile",
+        "link": "/my-profile"
+      },
+      {
+        "text": "Settings",
+        "link": "/"
+      },
+      {
+        "text": "Log Out",
+        "link": "/"
+      }
+    ]
+  }
+}

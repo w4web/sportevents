@@ -1,0 +1,59 @@
+<div class="page-dashboard my-65">
+  <div class="container">
+    <h4 class="mb-4">Export to CSV for list.</h4>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="btn-wrap text-right mb-3">
+          <button class="btn btn-primary" (click)="exportCsvModal(content)"><i class="fa fa-download mr-2"></i>Export to CSV</button>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Sport</th>
+                <th scope="col">Name</th>
+                <th scope="col">Avg. Grade</th>
+                <th scope="col">Men</th>
+                <th scope="col">Women</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of TLData">
+                <td>{{ item.id }}</td>
+                <td>{{ item.sport }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.grade }}</td>
+                <td>{{ item.man }}</td>
+                <td>{{ item.women }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Export to CSV</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Please select fields for export.</p>
+    <ul class="themeUl field-list">
+      <li *ngFor="let key of _allKeys; let i = index">
+        <input type="checkbox" id="field{{ i }}" (change)="checkToAdd($event)" value="{{ key }}" checked />
+        <label for="field{{ i }}">{{ key }}</label>
+      </li>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" (click)="exportToCsv()"><i class="fa fa-download mr-2"></i>Export to CSV</button>
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>

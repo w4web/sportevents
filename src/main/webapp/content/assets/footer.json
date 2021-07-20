@@ -1,0 +1,32 @@
+{
+  "logo": "../../../content/assets/images/logo-footer.png",
+  "copyright": "© 2021 Fuel2endure",
+  "menu": [
+    {
+      "title": "Terms and conditions",
+      "link": "/"
+    },
+    {
+      "title": "Privacy",
+      "link": "/"
+    },
+    {
+      "title": "Problems with the website?",
+      "link": "/"
+    },
+    {
+      "title": "Graphic design by Kekk Ontwerp",
+      "link": "/"
+    }
+  ],
+  "social": [
+    {
+      "icon": "fa fa-facebook",
+      "link": "/"
+    },
+    {
+      "icon": "fa fa-twitter",
+      "link": "/"
+    }
+  ]
+}

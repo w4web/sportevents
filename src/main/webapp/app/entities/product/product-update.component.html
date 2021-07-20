@@ -1,0 +1,23 @@
+<div class="ProdutEditPage inner-page">
+    <div class="container">
+        <h3 *ngIf="isAdd" class="mb-4">Create new Product</h3>
+        <h3 *ngIf="!isAdd" class="mb-4">Edit the Product</h3>
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <form [class.forAdd]="isAdd" [formGroup]="editForm" (ngSubmit)="save()">
+            <formly-form class="small-gutters" [model]="model" [fields]="fields" [options]="options" [form]="editForm">
+            </formly-form>
+
+            <div class="form-btns mt-4">
+                <button type="submit" class="btn btn-primary" [disabled]="!editForm.valid || isSaving">
+                    <span *ngIf="isAdd">Create product</span>
+                    <span *ngIf="!isAdd">Update product</span>
+                </button>
+                <button type="button" id="cancel-save" class="btn btn-link" (click)="previousState()">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

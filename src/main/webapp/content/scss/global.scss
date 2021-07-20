@@ -1,0 +1,496 @@
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7fa;
+  font-size: 14px;
+}
+a,
+a:hover,
+a:focus {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+hr {
+  border-top: 1px solid #dfdfe8;
+}
+p {
+  color: #737373;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 34px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 22px;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.inner-page {
+  padding: 50px 0;
+}
+.container {
+  max-width: 1248px;
+}
+button.btn,
+a.btn {
+  outline: none !important;
+  box-shadow: none !important;
+  height: auto;
+  font-size: 14px;
+  padding: 6px 10px;
+  min-height: unset;
+  line-height: normal;
+}
+button.btn.btn-sm,
+a.btn.btn-sm {
+  font-size: 12px;
+  padding: 6px 16px;
+}
+button.btn.btn-primary,
+a.btn.btn-primary {
+  background-color: #3ea9f5;
+  border-color: #3ea9f5;
+  color: #fff;
+  padding: 7px 15px;
+}
+button.btn.btn-primary:hover,
+a.btn.btn-primary:hover {
+  background-color: #1984cf;
+  border-color: #1984cf;
+}
+
+button.btn.btn-secondary,
+a.btn.btn-secondary {
+  background-color: #69b42d;
+  border-color: #69b42d;
+  color: #fff;
+  padding: 7px 15px;
+}
+button.btn.btn-secondary:hover,
+a.btn.btn-secondary:hover {
+  background-color: #508e1e;
+  border-color: #508e1e;
+}
+
+button.btn.btn-link,
+a.btn.btn-link {
+  color: #007fb6 !important;
+}
+
+.card {
+  border: none;
+  box-shadow: 0px 8px 24px rgba(13, 13, 18, 0.04);
+}
+.card-footer {
+  background-color: #fff;
+  border-top: 1px solid #f0f0f5;
+}
+.card.no-bg {
+  box-shadow: none;
+  background: none;
+}
+.my-65 {
+  margin-top: 65px;
+  margin-bottom: 65px;
+}
+.dash-col {
+  margin-bottom: 25px;
+}
+
+table.table.table-striped {
+  color: #242428;
+  thead {
+    tr {
+      background-color: #f7f7fa;
+    }
+  }
+  tbody {
+    tr:nth-child(odd) {
+      background-color: #ffffff;
+    }
+    tr:nth-child(even) {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+    tr:hover {
+      background: #f5f5f5;
+    }
+  }
+  tr th {
+    border-top: none;
+    font-weight: 500;
+    i {
+      font-size: 13px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  }
+  tr td {
+    a {
+      color: #a0a5b1;
+      display: inline-block;
+      margin: 0 5px;
+    }
+    a.view {
+      color: #3278b3;
+    }
+    a.edit {
+      color: #ffbc67;
+    }
+    a.delete {
+      color: #fc727a;
+    }
+    i {
+      font-size: 19px;
+    }
+  }
+}
+
+.themeUl {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.field-list {
+  li {
+    margin-bottom: 10px;
+    label {
+      margin-left: 10px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.dataT-row {
+  display: flex;
+  justify-content: space-between;
+}
+.page-item.active .page-link {
+  background-color: #9a9a9a;
+  border-color: #9a9a9a;
+}
+
+.athlete-id-link {
+  display: inline-block;
+  .athlete-avatar {
+    height: 70px;
+    width: 70px;
+    box-shadow: 0px 8px 24px rgba(13, 13, 18, 0.16);
+    border-radius: 50%;
+    background-color: #f7f7fa;
+    overflow: hidden;
+    margin: -55px auto 15px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.btn-card-link {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: #737373;
+  .media-body {
+    span {
+      color: #3ea9f5;
+    }
+  }
+  .media-right {
+    font-size: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    color: #a2a2a2;
+  }
+}
+.wrapper.bgWhite {
+  background-color: #ffffff;
+}
+
+// Form style
+
+.form-group {
+  label {
+    color: #242428;
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  .form-control {
+    font-size: 14px;
+    height: 34px;
+    background-color: #fff;
+    border: 1px solid #dfdfe8;
+    color: #666;
+    line-height: 1.4em;
+    &:disabled {
+      background-color: #e9ecef;
+    }
+    &:focus {
+      border-color: #007fb6;
+      outline: 0 !important;
+      box-shadow: none !important;
+    }
+    &::placeholder {
+      color: #adadad;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: #adadad;
+    }
+    &::-ms-input-placeholder {
+      color: #adadad;
+    }
+  }
+  textarea.form-control {
+    height: 125px;
+  }
+  formly-field-select,
+  .formly-field-select {
+    display: block;
+    position: relative;
+  }
+  formly-field-select::after,
+  .formly-field-select::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -2px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #242428;
+    z-index: 1;
+  }
+  select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
+  }
+  .form-control.is-invalid {
+    border-color: #dc3545 !important;
+  }
+  .tio-col {
+    display: flex;
+    align-items: center;
+    .formly-field-select {
+      flex-grow: 1;
+    }
+    span {
+      padding-left: 10px;
+    }
+  }
+}
+
+.input-group-text {
+  background-color: #ffffff;
+  font-size: 12px;
+  color: #969696;
+  border: none;
+  padding: 0;
+  margin-left: 10px;
+}
+.noLabel {
+  margin-top: 24px;
+}
+.footer-logo {
+  max-width: 200px;
+}
+
+.profile-detail .athlete-avatar {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  background-color: #f7f7fa;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.profile-detail .athlete-avatar img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.personal-detail {
+  margin-bottom: 30px;
+  li {
+    margin-bottom: 10px;
+  }
+}
+label.custom-control-label {
+  margin-bottom: 0;
+  padding-top: 3px;
+  color: #999;
+}
+.guide-text {
+  color: #999;
+}
+.wrapTandC {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  label.custom-control-label span {
+    display: none;
+  }
+  > span:last-child {
+    color: #999;
+    margin-left: 3px;
+  }
+  a {
+    color: #007fb6;
+  }
+}
+.paymentWrap {
+  display: flex;
+}
+.payment-detail {
+  margin-top: 20px;
+  color: #737373;
+}
+.paymentWrap > span:first-child {
+  width: 200px;
+}
+.paymentWrap .btn {
+  margin-top: 25px;
+  margin-left: 20px;
+}
+.payment-detail {
+  margin-bottom: 30px;
+  li {
+    margin-bottom: 10px;
+    span {
+      display: inline-block;
+      width: 180px;
+      padding-right: 15px;
+    }
+  }
+}
+.pay-icon {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  background-color: #508e1e;
+  color: #fff;
+  line-height: 50px;
+  font-size: 22px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  box-shadow: 2px 2px 13px -2px rgba(0, 0, 0, 0.5);
+}
+
+.appModalWrap {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  cursor: pointer;
+}
+.appModalWrap.show {
+  display: block;
+}
+.appModal {
+  background-color: #fff;
+  position: fixed;
+  z-index: 99999;
+  left: 20px;
+  right: 20px;
+  top: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 600px;
+}
+.appModal.show {
+  display: flex;
+}
+.text-right {
+  text-align: right;
+}
+.modal-content {
+  padding: 20px;
+}
+.modal-content-inner {
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+}
+.modal-content-inner p {
+  margin-top: 0;
+}
+.modal-footer {
+  padding: 10px 20px;
+  border-top: 1px solid #ccc;
+}
+.info-icon {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  background-color: #3ea9f5;
+  color: #fff;
+  text-align: center;
+  line-height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.selector-wrap {
+  display: flex;
+  align-items: center;
+}
+.select-left {
+  width: 500px;
+  max-width: 90%;
+  margin-right: 10px;
+}
+.end-slot {
+  color: #969696;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+.profile-detail .location {
+  margin-bottom: 20px;
+}
+.input-wrap {
+  display: flex;
+  align-items: center;
+  .input-left {
+    flex-grow: 1;
+    padding-right: 10px;
+  }
+}
+.form-group .form-control[ng-reflect-is-disabled] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+// Responsive css
+
+@media screen and (max-width: 767px) {
+  .my-65 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .page-dashboard.my-65 {
+    margin-top: 65px;
+  }
+  .inner-page {
+    padding: 30px 0;
+  }
+}

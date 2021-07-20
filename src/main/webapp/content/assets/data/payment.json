@@ -1,0 +1,16 @@
+[
+  {
+    "key": "paymentCode",
+    "wrappers": ["paymentCode"],
+    "fieldGroup": [
+      {
+        "key": "code",
+        "type": "input",
+        "templateOptions": {
+          "type": "text",
+          "label": "Discount code (optional)"
+        }
+      }
+    ]
+  }
+]

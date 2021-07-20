@@ -1,0 +1,7 @@
+{
+  "*": {
+    "target": "http://dash-env.eba-4vsi7dmm.eu-central-1.elasticbeanstalk.com",
+    "secure": false,
+    "loglevel": "debug"
+  }
+}

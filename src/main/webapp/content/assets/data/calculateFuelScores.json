@@ -1,0 +1,9 @@
+[
+  {
+    "key": "calculate",
+    "type": "calculateFuelScores",
+    "templateOptions": {
+      "helpInfo": "<p><b>Your Sweat rate:</b></p><p> this rate shows you the amount of fluid lost per hour. </p><p><b>Your Fuel score:</b></p><p> Did you come back 'in balance' from your training session? Your Fuel score shows you how much - as a percentage of your body weight - your balance was disturbed. Did you stay below 1%? Congratulations, you stayed in balance! Did you go over 1%? Drinking more will be the way to train and recover more effectively. Warning: You can keep your weight up only by eating on the road, but your fluid balance will then be heavily disturbed.</p>"
+    }
+  }
+]

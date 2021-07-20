@@ -1,0 +1,35 @@
+<div class="trainingEditPage inner-page">
+    <div class="container">
+        <h3 *ngIf="isAdd" class="mb-4">Create new workout</h3>
+        <h3 *ngIf="!isAdd" class="mb-4">Edit the workout</h3>
+
+        <hr><br>
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <form [class.forAdd]="isAdd" [formGroup]="editForm" (ngSubmit)="calculate()">
+            <formly-form class="small-gutters" [model]="model" [fields]="fields" [options]="options" [form]="editForm">
+            </formly-form>
+
+            <div class="form-btns mt-2 mb-4">
+                <button type="submit" class="btn btn-primary" [disabled]="!editForm.valid || isSaving"> 
+                    <span>Calculate Fuel scores</span>
+                </button>
+                <button type="button" id="cancel-save" class="btn btn-link" (click)="previousState()">
+                    Cancel
+                </button>
+            </div>
+        </form>
+
+        <div *ngIf="isShowCalculate" class="calcForm">
+            <form [formGroup]="calcEditForm" (ngSubmit)="save()">
+                <formly-form [model]="calcModel" [fields]="calcFields" [options]="calcOptions" [form]="calcEditForm">
+                </formly-form>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+    

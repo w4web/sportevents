@@ -1,0 +1,40 @@
+[
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-6",
+        "type": "input",
+        "key": "firstName",
+        "templateOptions": {
+          "label": "First Name",
+          "required": true
+        }
+      },
+      {
+        "className": "col-6",
+        "type": "input",
+        "key": "lastName",
+        "templateOptions": {
+          "label": "Last Name",
+          "required": true
+        }
+      }
+    ]
+  },
+  {
+    "key": "email",
+    "type": "input",
+    "templateOptions": {
+      "type": "email",
+      "label": "Email",
+      "placeholder": "Enter email",
+      "required": true,
+      "minLength": 5,
+      "maxLength": 100
+    },
+    "validators": {
+      "validation": ["email"]
+    }
+  }
+]

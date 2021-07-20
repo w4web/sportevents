@@ -1,0 +1,66 @@
+{
+  "TOPBAR": {
+    "searchPlaceholder": "Search..",
+    "nav_myProfile": {
+      "title": "My Profile",
+      "link_text_1": "My account",
+      "link_text_2": "Setting",
+      "link_text_3": "Logout"
+    }
+  },
+  "sidebar_data": {
+    "0": {
+      "title": "Dashboard",
+      "link": "/dashboard",
+      "icon": "fa fa-dashboard",
+      "isChild": false
+    },
+    "1": {
+      "title": "Products",
+      "link": "/product",
+      "icon": "fa fa-puzzle-piece",
+      "isChild": false
+    },
+    "2": {
+      "title": "Customers",
+      "link": "/customer",
+      "icon": "fa fa-users",
+      "isChild": false
+    },
+    "3": {
+      "title": "Admin",
+      "link": "/admin",
+      "icon": "fa fa-user",
+      "isChild": true,
+      "Childs": {
+        "0": {
+          "title": "Admin Link 1",
+          "link": "/Link1",
+          "isChild": false
+        },
+        "1": {
+          "title": "Admin Link 2",
+          "link": "/Link2",
+          "isChild": false
+        },
+        "2": {
+          "title": "Admin Link 3",
+          "link": "/Link3",
+          "isChild": false
+        }
+      }
+    }
+  },
+  "SETTINGS": {
+    "TITLE": "Profile Settings.",
+    "SUBTITLE": "Here you can change your profile settings.",
+    "COLOR": {
+      "TITLE": "Select theme color.",
+      "OPTION_1": "Light",
+      "OPTION_2": "Dark"
+    },
+    "LANGUAGE": {
+      "TITLE": "Choose your language."
+    }
+  }
+}

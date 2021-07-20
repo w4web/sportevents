@@ -1,0 +1,44 @@
+<div class="form-user-wrap" style="background-image: url('./content/assets/images/LoginBg.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 my-5 mx-auto">
+
+                <div class="alert alert-success" *ngIf="success">
+                    <strong>Registration saved!</strong> Please check your email for confirmation.
+                </div>
+
+                <div class="alert alert-danger" *ngIf="error">
+                    <strong>Registration failed!</strong> Please try again later.
+                </div>
+
+                <div class="alert alert-danger" *ngIf="errorUserExists">
+                    <strong>Login name already registered!</strong> Please choose another one.
+                </div>
+
+                <div class="alert alert-danger" *ngIf="errorEmailExists">
+                    <strong>Email is already in use!</strong> Please choose another one.
+                </div>
+
+                <div class="card card-user my-4">
+                    <div class="card-body">
+                        <div class="form-user">
+                            <h2>Register</h2>
+                            <p class="hint-text">Create your account. It's free and only takes a minute.</p>
+
+                            <form [formGroup]="form" (ngSubmit)="submit()">
+                                <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form">
+                                </formly-form>
+                                <hr class="my-3">
+                                <button type="submit" class="btn btn-secondary btn-lg btn-block"
+                                    [disabled]="!form.valid">Sign Up</button>
+                                <button #reset hidden type="reset">reset</button>
+                            </form>
+                            <p class="hint-text my-3">Do you have an account already?</p>
+                            <a class="btn btn-outline-secondary btn-lg btn-block" routerLink="/login">Sign In</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

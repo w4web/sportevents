@@ -1,0 +1,29 @@
+<footer>
+    <div class="container footer-global">
+        <div class="row">
+            <div class="f-col col-md-3">
+                <div class="footer-logo branding">
+                    <a routerLink="/">
+                        <img src="{{footerData.logo}}" alt="img" />
+                    </a>
+                </div>
+                <div class="copyright">
+                    {{footerData.copyright}}
+                </div>
+            </div>
+            <div class="f-col footerLinkWrap col-md-9">
+                <ul class="footer-links list-unstyled">
+                    <li *ngFor="let item of footerData.menu">
+                        <a routerLink="{{item.link}}">{{item.title}}</a>
+                    </li>
+                </ul>
+                <ul class="social-icons list-unstyled">
+                    <li *ngFor="let item of footerData.social">
+                        <a routerLink="{{item.link}}"><i class="{{item.icon}}"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>

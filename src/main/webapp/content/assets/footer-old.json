@@ -1,0 +1,110 @@
+{
+  "logo": "../../../content/assets/images/logo-footer.png",
+  "copyright": "© 2021 Fuel2endure",
+  "menu": [
+    {
+      "main_title": "About",
+      "class": "offset-md-1",
+      "list": [
+        {
+          "title": "About",
+          "link": "/"
+        },
+        {
+          "title": "Features",
+          "link": "/"
+        },
+        {
+          "title": "Mobile",
+          "link": "/"
+        },
+        {
+          "title": "Subscription",
+          "link": "/"
+        },
+        {
+          "title": "Privacy Policy",
+          "link": "/"
+        },
+        {
+          "title": "Terms and Conditions",
+          "link": "/"
+        },
+        {
+          "title": "About Our Maps",
+          "link": "/"
+        }
+      ]
+    },
+    {
+      "main_title": "Follow",
+      "class": "",
+      "list": [
+        {
+          "title": "Facebook",
+          "link": "/"
+        },
+        {
+          "title": "Twitter",
+          "link": "/"
+        },
+        {
+          "title": "Instagram",
+          "link": "/"
+        },
+        {
+          "title": "YouTube",
+          "link": "/"
+        },
+        {
+          "title": "Blog",
+          "link": "/"
+        }
+      ]
+    },
+    {
+      "main_title": "Help",
+      "class": "",
+      "list": [
+        {
+          "title": "Strava Support",
+          "link": "/"
+        }
+      ]
+    },
+    {
+      "main_title": "More",
+      "class": "",
+      "list": [
+        {
+          "title": "Local",
+          "link": "/"
+        },
+        {
+          "title": "Careers",
+          "link": "/"
+        },
+        {
+          "title": "Business",
+          "link": "/"
+        },
+        {
+          "title": "Developers",
+          "link": "/"
+        },
+        {
+          "title": "Labs",
+          "link": "/"
+        },
+        {
+          "title": "Pros on Strava",
+          "link": "/"
+        },
+        {
+          "title": "Strava Community Standards",
+          "link": "/"
+        }
+      ]
+    }
+  ]
+}
