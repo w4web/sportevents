@@ -1,0 +1,41 @@
+<nav class="theme-top-nav navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+  <div class="navbar-brand">
+    <button (click)="commonService.isShow = !commonService.isShow" class="navbar-toggler navbar-toggler-show" type="button">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <div class="navbar-title">
+    <h5>Sportevents manager</h5>
+  </div>
+  
+
+  <button (click)="isNav = !isNav" class="navbar-toggler navbar-toggler-mobile" type="button">
+    <i class="fas fa-cog"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" [class.show]="isNav">
+    <ul class="navbar-nav nav-options">
+      <li class="nav-item">
+        <div ngbDropdown class="d-inline-block">
+          <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>
+            <div class="nl-block">
+              <div class="profile-img">
+                <img src="../../../content/assets/images/user.jpg" alt="img" />
+              </div>
+              <div class="nl-right">
+                <div class="userName">Renee Mickelvey</div>
+                <div class="accSeting">{{ 'TOPBAR.nav_myProfile.title' | translate }}</div> 
+              </div>
+            </div>
+          </a>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu-right">
+            <button routerLink="/my-account" ngbDropdownItem>{{ 'TOPBAR.nav_myProfile.link_text_1' | translate }}</button>
+            <button routerLink="/settings" ngbDropdownItem>{{ 'TOPBAR.nav_myProfile.link_text_2' | translate }}</button>
+            <button routerLink="/login" ngbDropdownItem>{{ 'TOPBAR.nav_myProfile.link_text_3' | translate }}</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

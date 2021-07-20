@@ -18,7 +18,7 @@ const routes: Routes = [
     path: '',
     component: SingleLayoutComponent,
     children: [
-      { path: '', redirectTo: 'payment', pathMatch: 'full' },
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       {
         path: 'exportData',
         component: ExportDataComponent,
@@ -26,22 +26,6 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: () => import('./entities/dashboard/dashboard.module').then(m => m.DashboardModule),
-      },
-      {
-        path: 'product',
-        loadChildren: () => import('./entities/product/product.module').then(m => m.DashboardProductModule),
-      },
-      {
-        path: 'training',
-        loadChildren: () => import('./entities/training/training.module').then(m => m.TrainingModule),
-      },
-      {
-        path: 'my-profile',
-        loadChildren: () => import('./entities/my-profile/my-profile.module').then(m => m.MyProfileModule),
-      },
-      {
-        path: 'payment',
-        loadChildren: () => import('./entities/payment/payment.module').then(m => m.PaymentModule),
       },
       {
         path: 'admin',

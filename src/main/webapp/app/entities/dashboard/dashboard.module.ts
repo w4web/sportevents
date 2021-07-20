@@ -3,10 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
-import { TemplifySingleSharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [DashboardComponent],
-  imports: [CommonModule, DashboardRoutingModule, TemplifySingleSharedModule],
+  imports: [CommonModule, DashboardRoutingModule],
 })
 export class DashboardModule {}

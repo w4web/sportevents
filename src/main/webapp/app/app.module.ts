@@ -7,8 +7,6 @@ import { TemplifySingleCoreModule } from 'app/core/core.module';
 import { TemplifySingleAppRoutingModule } from './app-routing.module';
 
 import { TemplifySingleEntityModule } from './entities/entity.module';
-// jhipster-needle-angular-add-module-import JHipster will add new module here
-import { FooterComponent } from './layouts/footer/footer.component';
 import { PageRibbonComponent } from './layouts/profiles/page-ribbon.component';
 import { ErrorComponent } from './layouts/error/error.component';
 import { AppComponent } from 'app/app.component';
@@ -17,8 +15,11 @@ import { AbstractControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HeaderComponent } from 'app/layouts/header/header.component';
 import { SingleLayoutComponent } from 'app/layout/layout.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { SidebarComponent } from 'app/layouts/sidebar/sidebar.component';
+import { TopbarComponent } from 'app/layouts/topbar/topbar.component';
 
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 import { ExportDataComponent } from './export-data/export-data.component';
@@ -78,12 +79,13 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     TemplifySingleSharedModule,
     TemplifySingleCoreModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
     TemplifySingleEntityModule,
     TemplifySingleAppRoutingModule,
-    NgcCookieConsentModule.forRoot(cookieConfig),
+    // NgcCookieConsentModule.forRoot(cookieConfig),
     FormlyModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
@@ -96,11 +98,11 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   declarations: [
     AppComponent,
     SingleLayoutComponent,
-    HeaderComponent,
     ErrorComponent,
     PageRibbonComponent,
-    FooterComponent,
     ExportDataComponent,
+    TopbarComponent,
+    SidebarComponent,
   ],
   bootstrap: [AppComponent],
 })

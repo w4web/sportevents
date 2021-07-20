@@ -1,0 +1,35 @@
+<div class="sidebar-wrap">
+  <div class="close-sidebar" (click)="closeSidebar()"><i class="fas fa-times"></i></div>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <div class="brand-wrapper">
+        <div class="brand-name-wrapper">
+          <!-- <a class="navbar-brand" href="#">
+            <span class="brand-big"><img class="logo-left" src="../../../content/images/logo-left.png" /> <span>Templify</span></span>
+            <span class="brand-small"><img class="logo-left" src="../../../content/images/logo-left.png" /></span>
+          </a> -->
+          <div class="navbar-brand">
+            <button (click)="commonService.isShow = !commonService.isShow" class="navbar-toggler navbar-toggler-show" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-menu-container">
+      <ul class="nav navbar-nav">
+        <li *ngFor="let navItem of sidebarData" class="nav-item">
+          <a class="nav-link" routerLinkActive="active" *ngIf="navItem.page" routerLink="{{navItem.page}}">
+            <i class="{{ navItem.icon }}"></i>
+            {{ navItem.title }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- <div class="sidebar-background" style="background-image: url('../../../content/images/sidebar-bg-1.png');"></div> -->
+  <div class="sidebar-background"></div>
+</div>

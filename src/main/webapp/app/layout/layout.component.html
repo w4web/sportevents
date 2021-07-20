@@ -1,7 +1,9 @@
-<div class="wrapper" [class.bgWhite]="commonService.isBgWhite">
-    <app-header></app-header>
+<div class="wrapper" [ngClass]="{'show_sidebar': commonService.isShow, 'theme-dark': commonService.isDark }">
+    <app-sidebar></app-sidebar>
     <div class="main-content">
-        <router-outlet></router-outlet>
+        <app-topbar></app-topbar>
+        <div class="page-content">
+            <router-outlet></router-outlet>
+        </div>
     </div>
-    <app-footer></app-footer>
 </div>

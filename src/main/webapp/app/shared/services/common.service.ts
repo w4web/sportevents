@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class CommonService {
-  public isShow = true;
+  public isShow = false;
   public isDark = false;
   public isBgWhite: Boolean = false;
 
