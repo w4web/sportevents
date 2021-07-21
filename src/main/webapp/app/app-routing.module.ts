@@ -18,7 +18,7 @@ const routes: Routes = [
     path: '',
     component: SingleLayoutComponent,
     children: [
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: '', redirectTo: 'my-account', pathMatch: 'full' },
       {
         path: 'exportData',
         component: ExportDataComponent,
@@ -26,6 +26,10 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: () => import('./entities/dashboard/dashboard.module').then(m => m.DashboardModule),
+      },
+      {
+        path: 'my-account',
+        loadChildren: () => import('./entities/my-account/my-account.module').then(m => m.MyAccountModule),
       },
       {
         path: 'admin',

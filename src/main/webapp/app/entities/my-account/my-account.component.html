@@ -1,0 +1,29 @@
+<div class="form-user-wrap page-myAccount">
+    <div class="container">
+        <div class="form-user-inner">
+            <div class="alert alert-success" *ngIf="success">
+                <strong>Profile updated!</strong> We’ve saved your profile changes.
+            </div>
+
+            <div class="alert alert-danger" *ngIf="error">
+                <strong>Updation failed!</strong> Please try again later.
+            </div>
+
+            <div class="card card-user">
+                <div class="card-body">
+                    <div class="form-user">
+                        <h4>ACCOUNT PAGE</h4>
+                        <form [formGroup]="form" (ngSubmit)="submit()">
+                            <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form">
+                            </formly-form>
+                            <br>
+                            <button type="submit" class="btn btn-primary btn-lg w-250"
+                                [disabled]="!form.valid">SAVE</button>
+                            <button #reset hidden type="reset">reset</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

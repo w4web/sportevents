@@ -12,11 +12,14 @@ import { HttpLoaderFactory } from 'app/app.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   imports: [
     TemplifySingleSharedLibsModule,
     Ng2SearchPipeModule,
     FormlyBootstrapModule,
+    NgbModule,
     // FormlyModule.forRoot({ extras: { lazyRender: true } }),
     FormlyModule.forRoot({
       extras: { lazyRender: true },
@@ -42,6 +45,7 @@ import { HttpClient } from '@angular/common/http';
     HasAnyAuthorityDirective,
     TranslateModule,
     Ng2SearchPipeModule,
+    NgbModule,
   ],
 })
 export class TemplifySingleSharedModule {}

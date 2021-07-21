@@ -23,6 +23,7 @@ import { TopbarComponent } from 'app/layouts/topbar/topbar.component';
 
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 import { ExportDataComponent } from './export-data/export-data.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
@@ -79,6 +80,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 @NgModule({
   imports: [
     BrowserModule,
+    NgbModule,
     BrowserAnimationsModule,
     TemplifySingleSharedModule,
     TemplifySingleCoreModule,

@@ -16,6 +16,6 @@ export class ProfileService {
   }
 
   editUserFields(): any {
-    return this.http.get<any>('./content/assets/editUserFields.json');
+    return this.http.get<any>('../../../content/assets/editUserFields.json');
   }
 }

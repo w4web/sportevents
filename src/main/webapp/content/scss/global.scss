@@ -6,6 +6,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #fafafc;
   font-size: 14px;
+  color: #25345b;
 }
 a,
 a:hover,
@@ -18,7 +19,7 @@ hr {
   border-top: 1px solid #dfdfe8;
 }
 p {
-  color: #737373;
+  color: #25345b;
 }
 h1 {
   font-size: 40px;
@@ -35,6 +36,46 @@ h4 {
 img {
   display: block;
   max-width: 100%;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #d1d3da !important;
+  opacity: 1 !important;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #d1d3da !important;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #d1d3da !important;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.btn {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn-primary {
+  background-color: #4372fc;
+  border-color: #4372fc;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #3f69e5;
+  border-color: #3f69e5;
+}
+.btn.btn-lg {
+  font-size: 16px;
+  height: 48px;
 }
 .theme-top-nav.navbar {
   background-color: #fff !important;
@@ -438,6 +479,142 @@ img {
   border-bottom-color: #4372fc;
 }
 
+// For all forms
+
+form {
+  label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 13px;
+  }
+  .form-control {
+    height: 50px;
+    box-shadow: none !important;
+    border-color: #e3e3e3;
+  }
+  .form-group {
+    margin-bottom: 20px;
+    .form-control {
+      box-shadow: 0 0 7px -4px rgba(0, 0, 0, 0.3) inset !important;
+    }
+  }
+  formly-wrapper-addons {
+    .form-control {
+      padding-left: 55px;
+    }
+  }
+  .input-group-prepend {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    z-index: 1;
+    height: 48px;
+  }
+  .input-group-text {
+    color: #afb0bf;
+    background: none;
+    border: none;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .icon-lock {
+    &::after {
+      content: '';
+      height: 20px;
+      width: 14px;
+      background-image: url('../assets/images//lock.png');
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      background-position: center center;
+    }
+  }
+  .forgotLink {
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 12px;
+    a {
+      color: #4372fc !important;
+      font-weight: 500;
+    }
+  }
+}
+
+.no-lbl label {
+  display: none;
+}
+
+.signUpLink {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+  a {
+    color: #4372fc !important;
+    font-weight: 500;
+    margin-left: 5px;
+  }
+}
+
+.form-user-wrap {
+  background-color: #fafafc;
+  height: 100vh;
+  overflow-y: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  .form-user-inner {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  .card-user {
+    box-shadow: 1px 2px 11px -5px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin-top: 95px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+  }
+  .form-user h4 {
+    margin: 0 0 42px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+  .form-user .hint-text {
+    color: #999;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.user-register {
+  .form-user-inner {
+    max-width: 580px;
+  }
+}
+
+.page-myAccount {
+  .form-user-inner {
+    max-width: 100%;
+  }
+  .card-user {
+    margin-top: 0;
+    h4 {
+      text-align: left;
+    }
+  }
+}
+
+.w-250 {
+  width: 250px;
+}
+.page-title {
+  margin: 0 0 42px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 // Responsive ===============
 
 @media only screen and (min-width: 1024px) {
@@ -522,5 +699,13 @@ img {
 @media only screen and (max-width: 767px) {
   .page-content {
     padding: 15px;
+  }
+  .page-myAccount {
+    .container {
+      padding: 0;
+    }
+    .card-user {
+      padding: 10px;
+    }
   }
 }

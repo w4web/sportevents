@@ -4,6 +4,10 @@
     "type": "input",
     "templateOptions": {
       "label": "Username",
+      "placeholder": "Username",
+      "addonLeft": {
+        "class": "far fa-user"
+      },
       "required": true
     }
   },
@@ -13,14 +17,11 @@
     "templateOptions": {
       "type": "password",
       "label": "Password",
+      "placeholder": "****************",
+      "addonLeft": {
+        "class": "icon-lock"
+      },
       "required": true
-    }
-  },
-  {
-    "type": "checkbox",
-    "key": "remember",
-    "templateOptions": {
-      "label": "Remember me"
     }
   }
 ]

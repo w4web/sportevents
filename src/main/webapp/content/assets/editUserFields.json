@@ -3,38 +3,108 @@
     "fieldGroupClassName": "row",
     "fieldGroup": [
       {
-        "className": "col-6",
+        "className": "col-md-4",
         "type": "input",
         "key": "firstName",
         "templateOptions": {
           "label": "First Name",
+          "placeholder": "First Name",
           "required": true
         }
       },
       {
-        "className": "col-6",
+        "className": "col-md-4",
+        "type": "input",
+        "key": "middleName",
+        "templateOptions": {
+          "label": "Middle Name",
+          "placeholder": "Middle Name",
+          "required": true
+        }
+      },
+      {
+        "className": "col-md-4",
         "type": "input",
         "key": "lastName",
         "templateOptions": {
           "label": "Last Name",
+          "placeholder": "Last Name",
           "required": true
         }
       }
     ]
   },
   {
-    "key": "email",
-    "type": "input",
-    "templateOptions": {
-      "type": "email",
-      "label": "Email",
-      "placeholder": "Enter email",
-      "required": true,
-      "minLength": 5,
-      "maxLength": 100
-    },
-    "validators": {
-      "validation": ["email"]
-    }
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-md-6",
+        "type": "input",
+        "key": "mobileNumber",
+        "templateOptions": {
+          "label": "Mobile Phone",
+          "placeholder": "Mobile Phone",
+          "required": true
+        }
+      },
+      {
+        "className": "col-md-6",
+        "key": "email",
+        "type": "input",
+        "templateOptions": {
+          "type": "email",
+          "label": "Email",
+          "placeholder": "Email",
+          "required": true,
+          "minLength": 5,
+          "maxLength": 100
+        },
+        "validators": {
+          "validation": ["email"]
+        }
+      }
+    ]
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-md-6",
+        "key": "password",
+        "type": "input",
+        "templateOptions": {
+          "type": "password",
+          "label": "Password",
+          "placeholder": "Password",
+          "required": true,
+          "minLength": 3
+        }
+      },
+      {
+        "className": "col-md-6",
+        "type": "input",
+        "key": "shoeSizeShorttrack",
+        "templateOptions": {
+          "label": "Shoe-size shorttrack",
+          "placeholder": "Shoe-size shorttrack",
+          "required": true
+        }
+      }
+    ]
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-md-6",
+        "type": "input",
+        "key": "shoeSizeSkeeleren",
+        "templateOptions": {
+          "label": "Shoe-size skeeleren",
+          "placeholder": "Shoe-size skeeleren",
+          "required": true
+        }
+      }
+    ]
   }
 ]

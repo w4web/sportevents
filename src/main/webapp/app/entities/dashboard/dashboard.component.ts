@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styles: [],
 })
 export class DashboardComponent implements OnInit {
+  active = 1;
+
   constructor() {}
 
   ngOnInit(): void {}
