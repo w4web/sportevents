@@ -39,7 +39,7 @@ export class SidebarComponent implements OnInit {
     {
       title: 'Calendar',
       icon: 'far fa-calendar',
-      page: '/calendar',
+      page: '/events',
     },
     {
       title: 'Setting',

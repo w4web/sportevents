@@ -493,6 +493,10 @@ form {
     box-shadow: none !important;
     border-color: #e3e3e3;
   }
+  textarea.form-control {
+    height: 150px;
+    padding: 15px;
+  }
   .form-group {
     margin-bottom: 20px;
     .form-control {
@@ -502,12 +506,28 @@ form {
   formly-wrapper-addons {
     .form-control {
       padding-left: 55px;
+      background-image: none !important;
+    }
+  }
+  .icon-right {
+    formly-wrapper-addons {
+      .form-control {
+        padding-left: 12px;
+        padding-right: 55px;
+      }
     }
   }
   .input-group-prepend {
     position: absolute;
     top: 1px;
     left: 1px;
+    z-index: 1;
+    height: 48px;
+  }
+  .input-group-append {
+    position: absolute;
+    top: 1px;
+    right: 1px;
     z-index: 1;
     height: 48px;
   }
@@ -523,7 +543,18 @@ form {
       content: '';
       height: 20px;
       width: 14px;
-      background-image: url('../assets/images//lock.png');
+      background-image: url('../assets/images/lock.png');
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      background-position: center center;
+    }
+  }
+  .icon-marker {
+    &::after {
+      content: '';
+      height: 17px;
+      width: 14px;
+      background-image: url('../assets/images/marker.png');
       background-repeat: no-repeat;
       background-size: auto 100%;
       background-position: center center;
@@ -569,11 +600,13 @@ form {
     margin: 0 auto;
   }
   .card-user {
-    box-shadow: 1px 2px 11px -5px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 10px -3px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 7px;
+    overflow: hidden;
     padding: 30px;
     margin-top: 95px;
     margin-bottom: 50px;
-    border-radius: 10px;
   }
   .form-user h4 {
     margin: 0 0 42px;
@@ -615,7 +648,179 @@ form {
   text-transform: uppercase;
 }
 
+.myDashboard {
+  max-width: 1280px;
+
+  .theme-tabs {
+    border: none;
+    margin-bottom: 27px;
+
+    .nav-link {
+      font-size: 12px;
+      border: 1px solid #e3e3e3;
+      margin-right: 12px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      min-width: 110px;
+      text-align: center;
+      color: #9da2af;
+      text-transform: uppercase;
+    }
+    .nav-link.active {
+      background-color: #4372fc;
+      border-color: #4372fc;
+      color: #fff;
+    }
+  }
+}
+.card-list {
+  margin-bottom: 20px;
+
+  .card-body {
+    padding: 24px;
+  }
+  .eve-icon-wrap {
+    display: flex;
+    align-items: center;
+    padding-left: 7px;
+    .eve-title {
+      padding-left: 22px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 16px;
+    }
+  }
+  .eve-text {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    span {
+      margin-right: 12px;
+    }
+  }
+  .eve-users {
+    padding-right: 15px;
+    > i {
+      color: #b2b3c1;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    > span {
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      font-size: 16px;
+    }
+  }
+}
+
+.event-selected {
+  .page-title {
+    margin-bottom: 25px;
+  }
+  .card-body {
+    padding: 25px 22px;
+  }
+  h6 {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  p {
+    color: #9da2af;
+    margin-bottom: 2px;
+    font-size: 13px;
+    span {
+      margin-right: 10px;
+    }
+  }
+  hr {
+    border-color: #efefef;
+    margin: 10px 0 12px 0;
+  }
+  .eve-total {
+    font-weight: 500;
+  }
+  .eve-total-val {
+    color: #9da2af;
+    text-align: right;
+  }
+}
+
+.theme-card {
+  box-shadow: 2px 2px 8px -3px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.forAdd .eventId {
+  opacity: 0;
+  height: 1px;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.page-events {
+  .card-user {
+    margin-top: 0;
+    h4 {
+      text-align: left;
+    }
+  }
+  .form-user-inner {
+    max-width: 100%;
+  }
+}
+
+.form-user-wrap.page-inner {
+  height: auto;
+  background: none;
+  overflow: visible;
+}
+
+formly-field-select,
+.formly-field-select {
+  display: block;
+  position: relative;
+}
+formly-field-select::after,
+.formly-field-select::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -2px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #b2b2b2;
+  z-index: 1;
+}
+select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 30px;
+  background-image: none !important;
+}
+
 // Responsive ===============
+
+@media only screen and (min-width: 1100px) {
+  .event-list {
+    flex: 0 0 78%;
+    max-width: 78%;
+  }
+  .event-selected {
+    flex: 0 0 22%;
+    max-width: 22%;
+  }
+}
 
 @media only screen and (min-width: 1024px) {
   .theme-top-nav .navbar-brand {
@@ -642,6 +847,38 @@ form {
   }
   .sidebar-wrap {
     overflow: hidden;
+  }
+  .event-list {
+    margin-bottom: 40px;
+  }
+  .myDashboard .theme-tabs .nav-link {
+    margin-bottom: 12px;
+  }
+  .myDashboard .theme-tabs {
+    margin-bottom: 15px;
+  }
+  .card-list .eve-icon-wrap {
+    padding-left: 0;
+    margin-bottom: 15px;
+  }
+  .card-list .eve-icon-wrap {
+    display: block;
+  }
+  .eve-icon {
+    width: 40px;
+    margin: 0 auto 15px;
+  }
+  .card-list .eve-icon-wrap .eve-title {
+    padding-left: 0;
+    text-align: center;
+  }
+  .card-list .eve-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .card-list .eve-users {
+    text-align: center;
+    padding-right: 0;
   }
 
   // -----------------------------------

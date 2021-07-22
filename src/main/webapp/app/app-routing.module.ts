@@ -32,6 +32,10 @@ const routes: Routes = [
         loadChildren: () => import('./entities/my-account/my-account.module').then(m => m.MyAccountModule),
       },
       {
+        path: 'events',
+        loadChildren: () => import('./entities/events/events.module').then(m => m.EventsModule),
+      },
+      {
         path: 'admin',
         data: {
           authorities: [Authority.ADMIN],

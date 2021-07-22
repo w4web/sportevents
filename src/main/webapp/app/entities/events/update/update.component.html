@@ -1,0 +1,26 @@
+<div class="form-user-wrap page-inner page-events">
+    <div class="container">
+        <div class="form-user-inner">
+            <div class="card card-user">
+                <div class="card-body">
+                    <div class="form-user">
+                        <h4 *ngIf="isAdd">ADD EVENT</h4>
+                        <h4 *ngIf="!isAdd">EDIT EVENT</h4>
+
+                        <jhi-alert-error></jhi-alert-error>
+
+                        <form [class.forAdd]="isAdd" [formGroup]="editForm" (ngSubmit)="save()">
+                            <formly-form [model]="model" [fields]="fields" [options]="options" [form]="editForm">
+                            </formly-form>
+                            <br>
+                            <button type="submit" class="btn btn-primary btn-lg w-250" [disabled]="!editForm.valid || isSaving">
+                                <span *ngIf="isAdd">ADD EVENT</span>
+                                <span *ngIf="!isAdd">EDIT EVENT</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

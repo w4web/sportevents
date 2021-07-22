@@ -1,27 +1,135 @@
-<h4 class="page-title">New sportevents</h4>
-
-<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
-    <li [ngbNavItem]="1">
-      <a ngbNavLink>One</a>
-      <ng-template ngbNavContent>
-        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
-          master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
-          keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
-          salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-      </ng-template>
-    </li>
-    <li [ngbNavItem]="2">
-      <a ngbNavLink>Two</a>
-      <ng-template ngbNavContent>
-        
-      </ng-template>
-    </li>
-    <li [ngbNavItem]="3">
-      <a ngbNavLink>Three</a>
-      <ng-template ngbNavContent>
-        
-      </ng-template>
-    </li>
-  </ul>
+<div class="myDashboard">
+  <div class="row">
+    <div class="col-lg-9 event-list">
+      <h4 class="page-title">New sportevents</h4>
+      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs theme-tabs">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink>All</a>
+          <ng-template ngbNavContent>
+            <div class="card theme-card card-list">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-md-4">
+                    <div class="eve-icon-wrap">
+                      <div class="eve-icon">
+                        <img src="../../../content/assets/images/tracking.png" alt="img" />
+                      </div>
+                      <div class="eve-title">Shorttrack</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="eve-text">
+                      <span>21/03/2019</span><span>21:00</span><span>Haarlem</span>
+                    </div>
+                  </div>
+                  <div class="col-md-2 text-right">
+                    <div class="eve-users">
+                      <i class="far fa-user"></i><span>4</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card theme-card card-list">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-md-4">
+                    <div class="eve-icon-wrap">
+                      <div class="eve-icon">
+                        <img src="../../../content/assets/images/rowing.png" alt="img" />
+                      </div>
+                      <div class="eve-title">Rowing</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="eve-text">
+                      <span>21/06/2019</span><span>18:00</span><span>Amsterdam</span>
+                    </div>
+                  </div>
+                  <div class="col-md-2 text-right">
+                    <div class="eve-users">
+                      <i class="far fa-user"></i><span>9</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card theme-card card-list">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-md-4">
+                    <div class="eve-icon-wrap">
+                      <div class="eve-icon">
+                        <img src="../../../content/assets/images/running.png" alt="img" />
+                      </div>
+                      <div class="eve-title">Running</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="eve-text">
+                      <span>23/09/2019</span><span>18:00</span><span>Haarlem</span>
+                    </div>
+                  </div>
+                  <div class="col-md-2 text-right">
+                    <div class="eve-users">
+                      <i class="fas fa-user-lock"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink>Running</a>
+          <ng-template ngbNavContent>
+      
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+          <a ngbNavLink>Shorttrack</a>
+          <ng-template ngbNavContent>
+      
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="4">
+          <a ngbNavLink>Rowing</a>
+          <ng-template ngbNavContent>
+      
+          </ng-template>
+        </li>
+      </ul>
+      
+      <div [ngbNavOutlet]="nav" class="theme-nav"></div>
+    </div>
+    <div class="col-lg-3 event-selected">
+      <h4 class="page-title">Selected</h4>
+      <div class="card theme-card card-selected">
+        <div class="card-body">
+          <h6>Shorttrack</h6>
+          <p><span>21/03/2019</span><span>21:00</span><span>Haarlem</span></p>
+          <p><span>21/03/2019</span><span>21:00</span><span>Haarlem</span></p>
+          <hr>
+          <div class="row">
+            <div class="col-8 eve-total">Total</div>
+            <div class="col-4 eve-total-val">2</div>
+          </div>
+          <br>
+          <br>
+          <h6>Running</h6>
+          <p><span>21/03/2019</span><span>21:00</span><span>Haarlem</span></p>
+          <hr>
+          <div class="row">
+            <div class="col-8 eve-total">Total</div>
+            <div class="col-4 eve-total-val">1</div>
+          </div>
+          <br>
+          <br>
+          <button class="btn btn-primary btn-lg btn-block">SAVE</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
   
-  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+</div>

@@ -1,0 +1,141 @@
+[
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "key": "id",
+        "type": "input",
+        "className": "eventId col",
+        "defaultValue": 0,
+        "templateOptions": {
+          "label": "Id",
+          "required": true
+        },
+        "expressionProperties": {
+          "templateOptions.disabled": "model.id"
+        }
+      },
+      {
+        "className": "col",
+        "key": "eventType",
+        "type": "select",
+        "templateOptions": {
+          "label": "Event type (Running/skeeler/shorttrack)",
+          "options": [
+            {
+              "label": "Running",
+              "value": "Running"
+            },
+            {
+              "label": "Skeeler",
+              "value": "skeeler"
+            },
+            {
+              "label": "Shorttrack",
+              "value": "shorttrack"
+            }
+          ],
+          "required": true
+        }
+      },
+      {
+        "className": "col icon-right",
+        "key": "date",
+        "type": "input",
+        "templateOptions": {
+          "label": "Date",
+          "placeholder": "Date",
+          "type": "date",
+          "required": true,
+          "addonRight": {
+            "class": "far fa-calendar-alt"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-lg-6 icon-right",
+        "type": "input",
+        "key": "time",
+        "templateOptions": {
+          "label": "Time",
+          "placeholder": "Time",
+          "required": true,
+          "addonRight": {
+            "class": "far fa-clock"
+          }
+        }
+      },
+      {
+        "className": "col-lg-6 icon-right",
+        "type": "input",
+        "key": "location",
+        "templateOptions": {
+          "label": "Location",
+          "placeholder": "Location",
+          "required": true,
+          "addonRight": {
+            "class": "icon-marker"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-lg-6",
+        "type": "input",
+        "key": "trainerName",
+        "templateOptions": {
+          "label": "Trainer name",
+          "placeholder": "Trainer name",
+          "required": true
+        }
+      },
+      {
+        "className": "col-lg-6",
+        "key": "equipment",
+        "type": "select",
+        "templateOptions": {
+          "label": "Equipment",
+          "options": [
+            {
+              "label": "Equipment1",
+              "value": "equipment1"
+            },
+            {
+              "label": "Equipment2",
+              "value": "equipment2"
+            },
+            {
+              "label": "Equipment3",
+              "value": "equipment3"
+            }
+          ],
+          "required": true
+        }
+      }
+    ]
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-lg-12",
+        "type": "textarea",
+        "key": "description",
+        "templateOptions": {
+          "label": "Description",
+          "placeholder": "Description",
+          "required": true
+        }
+      }
+    ]
+  }
+]
