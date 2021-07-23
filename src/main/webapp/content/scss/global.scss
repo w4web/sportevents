@@ -14,6 +14,7 @@ a:focus {
   outline: none;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 hr {
   border-top: 1px solid #dfdfe8;
@@ -640,7 +641,7 @@ form {
 }
 
 .w-250 {
-  width: 250px;
+  min-width: 250px;
 }
 .page-title {
   margin: 0 0 42px;
@@ -834,13 +835,20 @@ select.form-control {
   }
   .close-sidebar {
     display: block;
-    padding: 18px;
+    padding: 12px 20px;
     border: 1px solid #ccc;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 12px;
+    right: 12px;
     cursor: pointer;
     z-index: 4;
+    font-size: 20px;
+  }
+  .theme-top-nav .navbar-brand {
+    margin: 0 0 0 10px;
+  }
+  .sidebar-wrap .navbar-header .navbar-brand {
+    height: 80px;
   }
   .navbar-toggler.navbar-toggler-mobile {
     border: none;
@@ -879,6 +887,18 @@ select.form-control {
   .card-list .eve-users {
     text-align: center;
     padding-right: 0;
+  }
+  .navbar-right {
+    position: absolute;
+    right: 15px;
+    top: 88%;
+    background-color: #fff;
+    z-index: 3;
+    padding: 12px;
+    box-shadow: 1px 1px 10px -3px rgba(0, 0, 0, 0.2);
+  }
+  .sidebar-wrap .navbar-toggler.navbar-toggler-show {
+    display: none !important;
   }
 
   // -----------------------------------
@@ -937,12 +957,18 @@ select.form-control {
   .page-content {
     padding: 15px;
   }
-  .page-myAccount {
+  .page-inner {
     .container {
       padding: 0;
     }
     .card-user {
       padding: 10px;
     }
+  }
+  .form-user-wrap .card-user {
+    margin-top: 40px;
+  }
+  .w-250 {
+    min-width: 150px;
   }
 }
