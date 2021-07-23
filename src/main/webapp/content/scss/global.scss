@@ -16,6 +16,9 @@ a:focus {
   color: inherit;
   cursor: pointer;
 }
+.clickable {
+  cursor: pointer;
+}
 hr {
   border-top: 1px solid #dfdfe8;
 }
@@ -517,6 +520,9 @@ form {
         padding-right: 55px;
       }
     }
+    .field-with-icon-right {
+      padding-right: 55px;
+    }
   }
   .input-group-prepend {
     position: absolute;
@@ -529,7 +535,7 @@ form {
     position: absolute;
     top: 1px;
     right: 1px;
-    z-index: 1;
+    z-index: 3;
     height: 48px;
   }
   .input-group-text {
@@ -808,6 +814,24 @@ select.form-control {
   -moz-appearance: none;
   padding-right: 30px;
   background-image: none !important;
+}
+
+.timeSlotWrap {
+  margin-top: -10px;
+  border: 1px solid #6c757d;
+  border-radius: 5px;
+  padding: 12px 2px 2px 12px;
+  label {
+    margin-bottom: 10px;
+  }
+  .timeSlotInner {
+    display: flex;
+    flex-wrap: wrap;
+    button {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 // Responsive ===============

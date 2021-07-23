@@ -40,28 +40,13 @@
       },
       {
         "className": "col-lg-6 icon-right",
-        "key": "date",
-        "type": "input",
+        "key": "dateTime",
+        "type": "dateTime",
         "templateOptions": {
-          "label": "Date",
-          "placeholder": "Date",
-          "type": "date",
-          "required": true,
-          "addonRight": {
-            "class": "far fa-calendar-alt"
-          }
+          "label": "Date & Time",
+          "placeholder": "yyyy-mm-dd",
+          "required": true
         }
-      }
-    ]
-  },
-  {
-    "fieldGroupClassName": "row justify-content-end",
-    "fieldGroup": [
-      {
-        "className": "col-lg-6",
-        "type": "timeSlots",
-        "key": "time",
-        "hideExpression": "!model.date"
       }
     ]
   },

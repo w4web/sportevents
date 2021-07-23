@@ -8,10 +8,11 @@ import { TemplifySingleSharedModule } from 'app/shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { FormlyModule } from '@ngx-formly/core';
-import { fieldMatchValidator, minlengthValidationMessages, EmailValidator } from '../../app.module';
+import { fieldMatchValidator, minlengthValidationMessages, EmailValidator, numberValidator } from '../../app.module';
+import { TimeSlotsComponent } from '../../shared/components/formly/time-slots.component';
 
 @NgModule({
-  declarations: [EventsComponent, UpdateComponent],
+  declarations: [EventsComponent, UpdateComponent, TimeSlotsComponent],
   imports: [
     CommonModule,
     TemplifySingleSharedModule,
@@ -19,9 +20,11 @@ import { fieldMatchValidator, minlengthValidationMessages, EmailValidator } from
     FormsModule,
     FormlyBootstrapModule,
     FormlyModule.forRoot({
+      types: [{ name: 'timeSlots', component: TimeSlotsComponent }],
       validators: [
         { name: 'email', validation: EmailValidator },
         { name: 'fieldMatch', validation: fieldMatchValidator },
+        { name: 'onlyNumber', validation: numberValidator },
       ],
       validationMessages: [
         { name: 'required', message: 'This field is required' },

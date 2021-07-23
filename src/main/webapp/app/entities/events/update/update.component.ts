@@ -46,6 +46,7 @@ export class UpdateComponent implements OnInit {
   }
 
   save(): void {
+    // console.log("Form data", this.model);
     this.isSaving = true;
     const event = this.createFromForm();
     if (event.id !== undefined) {

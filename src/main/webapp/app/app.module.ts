@@ -72,6 +72,19 @@ export function fieldMatchValidator(control: AbstractControl): any {
   return { fieldMatch: { message: 'Password Not Matching' } };
 }
 
+// Number Validator
+
+const numRegex = /^[0-9]*$/;
+export function numberValidator(control: AbstractControl): any {
+  if (control.value && !numRegex.test(control.value)) {
+    return {
+      onlyNumber: { message: 'Please enter number only.' },
+    };
+  }
+
+  return null;
+}
+
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './content/assets/i18n/', '.json');
