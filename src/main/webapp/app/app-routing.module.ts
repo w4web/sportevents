@@ -18,7 +18,7 @@ const routes: Routes = [
     path: '',
     component: SingleLayoutComponent,
     children: [
-      { path: '', redirectTo: 'my-account', pathMatch: 'full' },
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       {
         path: 'exportData',
         component: ExportDataComponent,
